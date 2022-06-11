@@ -25,9 +25,8 @@ namespace EntityFramewor_MVC.Controllers
         public IActionResult LoginUser(LoginCredential l)
         {
             string UserName = l.UserName;
-            string Password = l.PassWord;
             HttpContext.Session.SetString("Username", UserName);
-            HttpContext.Session.SetString("Password", Password);
+            string Password = l.PassWord;
             var result = (from i in _context.LoginCredentials where i.UserName == l.UserName && i.PassWord == l.PassWord select i).FirstOrDefault();
             if (result != null)
             {
@@ -37,6 +36,12 @@ namespace EntityFramewor_MVC.Controllers
             {
                 return View();
             }
+        }
+
+        public IActionResult logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("LoginUser");
         }
     }
 }
