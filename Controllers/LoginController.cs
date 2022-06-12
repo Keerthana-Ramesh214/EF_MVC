@@ -37,7 +37,22 @@ namespace EntityFramewor_MVC.Controllers
                 return View();
             }
         }
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Register([Bind("UserName,PassWord,ConfirmPassword")] LoginCredential loginCredential )
+        {
+            _context.Add(loginCredential);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("RegisteredSuccessfully");
+        }
 
+        public IActionResult RegisteredSuccessfully()
+        {
+            return View();
+        }
         public IActionResult logout()
         {
             HttpContext.Session.Clear();

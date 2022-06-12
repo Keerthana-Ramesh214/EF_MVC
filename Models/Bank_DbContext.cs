@@ -64,7 +64,14 @@ namespace EntityFramewor_MVC.Models
 
             modelBuilder.Entity<LoginCredential>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.UserId)
+                    .HasName("PK__LoginCre__CB9A1CFFD859F54F");
+
+                entity.Property(e => e.UserId).HasColumnName("userId");
+
+                entity.Property(e => e.ConfirmPassword)
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.PassWord)
                     .HasMaxLength(20)

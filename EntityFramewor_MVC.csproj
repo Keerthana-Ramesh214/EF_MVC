@@ -5,14 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Views\Shared\BankingImage.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Views\Login\BankingImage.jpg">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
+    <Content Include="Views\Shared\BankingImage.jpg" />
   </ItemGroup>
 
   <ItemGroup>

@@ -155,3 +155,6 @@ C:\Users\Admin\source\repos\EntityFramewor_MVC\obj\Debug\net5.0\Razor\Views\NewT
 C:\Users\Admin\source\repos\EntityFramewor_MVC\obj\Debug\net5.0\Razor\Views\NewTransactions\Index.cshtml.g.cs
 C:\Users\Admin\source\repos\EntityFramewor_MVC\obj\Debug\net5.0\Razor\Views\Login\LoginUser.cshtml.g.cs
 C:\Users\Admin\source\repos\EntityFramewor_MVC\obj\Debug\net5.0\Razor\Views\Shared\LoginPartial.cshtml.g.cs
+C:\Users\Admin\source\repos\EntityFramewor_MVC\obj\Debug\net5.0\EntityFramewor_MVC.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EntityFramewor_MVC\obj\Debug\net5.0\Razor\Views\Login\Register.cshtml.g.cs
+C:\Users\Admin\source\repos\EntityFramewor_MVC\obj\Debug\net5.0\Razor\Views\Login\RegisteredSuccessfully.cshtml.g.cs

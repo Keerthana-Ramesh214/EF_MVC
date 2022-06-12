@@ -4,7 +4,9 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>Login</h1>
+<h1 class="text-light" style="font-family:'Times New Roman', Times, serif">Welcome to Online Banking!!</h1>
+
+<h1 class="text-light" style="font-family:'Times New Roman', Times, serif">Login </h1>
 
 <hr />
 <div class="row">
@@ -12,13 +14,13 @@
         <form asp-action="LoginUser" >
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UserName" class="control-label"></label>
+                <label asp-for="UserName" class="control-label text-light"style="font-family:'Times New Roman', Times, serif"></label>
                 <input asp-for="UserName" class="form-control" />
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PassWord" class="control-label"></label>
-                <input asp-for="PassWord" class="form-control" />
+                <label asp-for="PassWord" class="control-label text-light" style="font-family:'Times New Roman', Times, serif" ></label>
+                <input asp-for="PassWord" class="form-control" type="password" />
                 <span asp-validation-for="PassWord" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -28,9 +30,7 @@
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
