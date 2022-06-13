@@ -1,9 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity;
 @using Microsoft.AspNetCore.Http;
 @inject IHttpContextAccessor HttpContextAccessor
-<style>
-    
-</style>    
+
 <ul class="navbar-nav">
     @{
         ViewBag.Username = @HttpContextAccessor.HttpContext.Session.GetString("Username");

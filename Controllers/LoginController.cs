@@ -42,7 +42,7 @@ namespace EntityFramewor_MVC.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Register([Bind("UserName,PassWord,ConfirmPassword")] LoginCredential loginCredential )
+        public async Task<IActionResult> Register([Bind("UserName,PassWord,Dob")] LoginCredential loginCredential)
         {
             _context.Add(loginCredential);
             await _context.SaveChangesAsync();
@@ -57,6 +57,26 @@ namespace EntityFramewor_MVC.Controllers
         {
             HttpContext.Session.Clear();
             return RedirectToAction("LoginUser");
+        }
+
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ForgotPassword(LoginCredential loginCredential)
+        {
+            string UserName = loginCredential.UserName;
+
+            DateTime UserId = Convert.ToDateTime(loginCredential.Dob);
+            var result = (from i in _context.LoginCredentials where i.UserName == loginCredential.UserName && i.Dob == loginCredential.Dob select i).FirstOrDefault();
+            ViewBag.PassWord = result.PassWord;
+            return RedirectToAction("DisplayPassword", new { PassWord = ViewBag.PassWord });
+        }
+        public IActionResult DisplayPassword(string PassWord)
+        {
+            ViewBag.PW = PassWord;
+            return View();
         }
     }
 }

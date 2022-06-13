@@ -11,20 +11,21 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="LoginUser" >
+        <form asp-action="LoginUser">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="UserName" class="control-label text-light"style="font-family:'Times New Roman', Times, serif"></label>
+                <label asp-for="UserName" class="control-label text-light" style="font-family:'Times New Roman', Times, serif"></label>
                 <input asp-for="UserName" class="form-control" />
                 <span asp-validation-for="UserName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PassWord" class="control-label text-light" style="font-family:'Times New Roman', Times, serif" ></label>
+                <label asp-for="PassWord" class="control-label text-light" style="font-family:'Times New Roman', Times, serif"></label>
                 <input asp-for="PassWord" class="form-control" type="password" />
                 <span asp-validation-for="PassWord" class="text-danger"></span>
             </div>
+                <a asp-area="" asp-controller="Login" asp-action="ForgotPassword" class="float-sm-right" style="color:lavender">Forgot Password</a>
             <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary" />
+                <input type="submit" value="Login" class="btn btn-primary"/>
             </div>
         </form>
     </div>

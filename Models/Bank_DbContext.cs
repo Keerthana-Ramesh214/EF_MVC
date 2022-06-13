@@ -65,13 +65,11 @@ namespace EntityFramewor_MVC.Models
             modelBuilder.Entity<LoginCredential>(entity =>
             {
                 entity.HasKey(e => e.UserId)
-                    .HasName("PK__LoginCre__CB9A1CFFD859F54F");
+                    .HasName("PK__LoginCre__1788CC4CFACE81C2");
 
-                entity.Property(e => e.UserId).HasColumnName("userId");
-
-                entity.Property(e => e.ConfirmPassword)
-                    .HasMaxLength(20)
-                    .IsUnicode(false);
+                entity.Property(e => e.Dob)
+                    .HasColumnType("date")
+                    .HasColumnName("DOB");
 
                 entity.Property(e => e.PassWord)
                     .HasMaxLength(20)
